@@ -1,0 +1,7 @@
+C:\Users\lowe_\Desktop\School Files\Semester 5\PROG3170\Assignment 1\WcfServiceAssignment1\bin\WcfServiceAssignment1.dll.config
+C:\Users\lowe_\Desktop\School Files\Semester 5\PROG3170\Assignment 1\WcfServiceAssignment1\bin\WcfServiceAssignment1.dll
+C:\Users\lowe_\Desktop\School Files\Semester 5\PROG3170\Assignment 1\WcfServiceAssignment1\bin\WcfServiceAssignment1.pdb
+C:\Users\lowe_\Desktop\School Files\Semester 5\PROG3170\Assignment 1\WcfServiceAssignment1\obj\Debug\WcfServiceAssignment1.csproj.AssemblyReference.cache
+C:\Users\lowe_\Desktop\School Files\Semester 5\PROG3170\Assignment 1\WcfServiceAssignment1\obj\Debug\WcfServiceAssignment1.csproj.CoreCompileInputs.cache
+C:\Users\lowe_\Desktop\School Files\Semester 5\PROG3170\Assignment 1\WcfServiceAssignment1\obj\Debug\WcfServiceAssignment1.dll
+C:\Users\lowe_\Desktop\School Files\Semester 5\PROG3170\Assignment 1\WcfServiceAssignment1\obj\Debug\WcfServiceAssignment1.pdb
