@@ -16,16 +16,16 @@ namespace WcfServiceAssignment1
         bool PrimeNumber(int number);
 
         [OperationContract]
-        int SumOfDigits(int sumNumber);
+        int SumOfDigits(string input);
 
         [OperationContract]
-        string ReverseString(string sReverse);
+        string ReverseString(string input);
 
         [OperationContract]
-        string HTMLTag(string tag, string txt);
+        string HTMLTag(string tag, string data);
 
         [OperationContract]
-        string SortNumbers(string sortType, int num1, int num2, int num3, int num4, int num5);
+        string SortNumbers(string sort, string input);
 
     }
 }

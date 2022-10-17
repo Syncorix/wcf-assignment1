@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web.Services.Description;
 
 namespace WcfServiceAssignment1
 {
@@ -30,42 +31,71 @@ namespace WcfServiceAssignment1
             }
         }
 
-        public int SumOfDigits(int sumNumber)
+        public int SumOfDigits(string input)
         {
-            if (sumNumber != 0)
+            List<int> digits = new List<int>();
+            int result = 0;
+
+            for (int i = 0; i < input.Length; i++)
             {
-                return (sumNumber % 10 + SumOfDigits(sumNumber / 10));
+                digits.Add(Convert.ToInt32(input.Substring(i, 1)));
             }
-            else
+
+            foreach (int i in digits)
             {
-                return 0;
+                result = result + i;
             }
+
+            return result;
         }
 
-        public string ReverseString(string sReverse)
+        public string ReverseString(string input)
         {
-            char[] reverseArray = sReverse.ToCharArray();
-            Array.Reverse(reverseArray);
-            return new string(reverseArray);
-        }
+            List<string> chars = new List<string>();
 
-        public string HTMLTag(string tag, string txt)
-        {
-            return $"<{tag}>{txt}</{tag}>";
-        }
-
-        public string SortNumbers(string sortType, int num1, int num2, int num3, int num4, int num5)
-        {
-            int[] sortArray = { num1, num2, num3, num4, num5 };
-            Array.Sort(sortArray);
-            if (sortType == "Descending")
+            for (int i = 0; i < input.Length; i++)
             {
-                Array.Reverse(sortArray);
+                chars.Add(input.Substring(i, 1));
             }
-            return $"{sortArray[0]},{sortArray[1]},{sortArray[2]},{sortArray[3]},{sortArray[4]}";
+            string result = "";
+            for (int i = chars.Count - 1; i > -1; i--)
+            {
+                result += chars[i];
+            }
+            return result;
         }
 
+        public string HTMLTag(string tag, string data)
+        {
+            return $"<{tag}>{data}</{tag}>";
+        }
 
+        public string SortNumbers(string sort, string input)
+        {
 
+            int[] digits = new int[5];
+            string result = "";
+
+            for (int i = 0; i < 5; i++)
+            {
+                digits[i] = Convert.ToInt32(input.Substring(i, 1));
+            }
+
+            if (sort == "1")
+            {
+                Array.Sort(digits);
+            }
+            else if (sort == "2")
+            {
+                Array.Sort(digits);
+                Array.Reverse(digits);
+            }
+            foreach (int i in digits)
+            {
+                result += i.ToString() + " ";
+            }
+
+            return (result);
+        }
     }
 }
